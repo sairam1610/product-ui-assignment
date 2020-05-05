@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unbxd</title>
+    <link rel = "icon" href ="unbxd.png">
+    <script src="index.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div id="unbxd-products">
+    <div class="header">
+        <div class="search-bar">
+            <input type="text" placeholder="Search" id="search" name="searchbar" onkeyup="searchProducts(this)">
+            <button class="search-button" id="search_button" onclick="onSubmitSearch()"><span class="search_icon"></span></button>
+        </div>
+    </div>
+    <div id="products-layout">
+        <div id="filter-list">
+            <span class="close-icon" onclick="hideFilter()">X</span>
+        </div>
+        <div class="products">
+            <div id="navigation-banner">
+                <img class="sale-image" src="sale.png">
+            </div>
+            <div class="filter-info">
+                <div id="product-count"></div>
+                <div class="mobile-filter" onclick="showFilter()">☰ FILTERS</div>
+                <div class="sort-type">
+                    <select id="sort-by">
+                        <option value="" selected>Sort By</option>
+                        <option value="high-low">High to Low</option>
+                        <option value="low-high">Low to High</option>
+                        <option value="relevance">Relevancy</option>
+                        <option value="latest">Latest</option>
+                    </select>
+                </div>
+            </div>
+            <div class="product-list">
+                <div id="product-row">
+                    <div class="loader"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
